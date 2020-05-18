@@ -9,13 +9,10 @@
 
 }
 
-resource "aws_s3_bucket" "example" {
+resource "aws_s3_bucket_object" "filesupload" {
    bucket = "terraformtestlogi"
-   acl = "private"
-   versioning {
-        enabled = true
-   }
-   tags = {
-     Name = "Terraforms3bucket"
-  }
+   key    = "new_object_key"
+   source = "/home/logi/Downloads/Mydocuments/Logi.jpeg"
+   etag = "${filemd5("/home/logi/Downloads/Mydocuments/Logi.jpeg")}"
 }
+
