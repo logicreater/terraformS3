@@ -1,7 +1,7 @@
 # Provider
   provider "aws" {
-      access_key="AKIAQORZLAFTTWHND63C"
-      secret_key="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"
+      access_key=""
+      secret_key=""
       region="ap-south-1"
       skip_credentials_validation = true
       skip_requesting_account_id = true
